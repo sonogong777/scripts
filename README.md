@@ -1,4 +1,7 @@
+'''
 Name: checkPS.sh 
+
+'''
 Description: check PS logs for indication of continuous flapping, which can alter the result of audit.  This is done through system log analysis for Reachable Vault search counts.  Normal to see several of these entries but during flapping could span upto 2000+.
 Default count: 200
 
@@ -8,7 +11,6 @@ Usage:
   Issuing this command without parameters will use default COUNT of 200.
 
 Examples:
-
 [root@ccdn-vvim-02 testing]# ./checkPS.sh
 Using default count of 200
 Checking following vaults for flapping
