@@ -22,6 +22,8 @@ VAULTS=(
 )
 LOGFILE=$0.out
 COUNT=200
+DAMAGED=findDamaged_1108_10.sh
+
 rm -rf $LOGFILE
 
 if [ $# -ne 0 ]; then
@@ -72,7 +74,7 @@ NOTOK=0
 for i in "${VAULTS[@]}"
 do
  #ping test
- ping -c 2 $i > /dev/null
+ /bin/ping -c 2 $i > /dev/null
  if [ $? -eq 0 ]; then
     if [[ $(checkVault $i) -gt $COUNT ]];then
         printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -92,4 +94,7 @@ if [ $NOTOK != 0 ];then
    echo "Possible issue detected, check logfile $LOGFILE, EXIT STATUS 1"
    exit 1
 fi
- echo "No issues detected, proceed with findDamaged script, EXIT STATUS 0"
+
+echo "No issues detected, proceed with findDamaged script, EXIT STATUS 0"
+echo "running $DAMAGED"
+./$DAMAGED
