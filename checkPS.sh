@@ -1,16 +1,6 @@
 #!/bin/bash
 ##########################################################################
-# Copyright 2014 by Cisco Systems, Inc.
-# All rights reserved.
-# Cisco Systems, Inc. makes no representations
-# or warranties, either express or implied, by or with respect to
-# anything in this source code, and shall not be liable for any
-# implied warranties of merchantability or fitness for a
-# particular purpose or for any indirect, special or consequential
-# damage. This source code is unsupported unless otherwise
-# explicitly stated.
-# This software is the confidential and proprietary information
-# of Cisco Systems. ("Confidential Information").
+
 ##########################################################################
 
 VERSION=0.1.0
